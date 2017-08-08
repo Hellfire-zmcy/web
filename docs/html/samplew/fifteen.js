@@ -78,7 +78,7 @@ window.onload = function() {
 		var n = selectPuzzle.selectedIndex+1;
 		if(n == 1)
 			n = "";
-		//alert(n);
+		alert(n);
 		for ( var t = 0; t < 15; t++) {
 			document.getElementsByTagName("body")[0].style.backgroundImage="url(originalback.jpg)";
 			puzzlearea[t].style.backgroundImage = "url(background"+n+".jpg)";
