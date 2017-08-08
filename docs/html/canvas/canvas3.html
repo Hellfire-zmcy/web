@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>canvas watch</title>
+  <style>
+    *{margin:0;padding:0;}
+  #canvas{margin:0 auto;display:block;}
+  </style>
+</head>
+<body>
+  <canvas id='canvas' width='500' height='500'></canvas>
+  <script>
+    (function(){
+    var canvas=document.getElementById('canvas');
+    var context=canvas.getContext('2d');
+    var time;
+    var width=canvas.width;
+    var height=canvas.height;
+    setInterval(function(){
+      draw();
+      
+    },1000)
+    function draw(){
+      //清屏
+    context.clearRect(0,0,width,height);
+    
+    //画外围的圆
+    context.beginPath();//开始绘制
+    context.lineWidth=6;
+    context.arc(width/2,height/2,0.4*width,0,2*Math.PI,false);//创建弧/曲线（用于创建圆形或部分圆）
+    context.stroke(); // 进行绘制
+    
+    //画刻度
+    for(var i=0;i<60;i++){
+      context.save();//保存当前环境状态
+      context.beginPath();
+      context.translate(width/2,height/2);//translate() 方法重新映射画布上的 (0,0) 位置。
+      context.rotate(6*i*Math.PI/180);//rotate() 方法旋转当前的绘图。
+      context.moveTo(0,-0.4*width);
+      if(i%5==0){//时刻度
+        context.lineWidth=6;
+      context.lineTo(0,-0.35*width);
+      }else{//分刻度
+        context.lineWidth=3;
+      context.lineTo(0,-0.38*width);
+      }
+      context.stroke();
+      context.restore();//返回之前保存过的路径状态和属性
+    }
+    
+    //画表针
+    time=new Date();
+    var hour=time.getHours();
+    hour=hour>12?hour-12:hour;//12小时制
+    var min=time.getMinutes();
+    var sec=time.getSeconds();
+    drawBand(width/2,height/2,0.13*width,8,30*hour);
+    drawBand(width/2,height/2,0.2*width,4,6*min);
+    drawBand(width/2,height/2,0.3*width,2,6*sec);
+    
+    }
+    function drawBand(x,y,length,linewidth,rot){//待改进：时针分针不能平滑移动，只能跳动
+      context.save();
+      context.beginPath();
+    context.translate(x,y);
+    context.rotate(rot*Math.PI/180);
+    context.moveTo(0,0);
+    context.lineTo(0,-length);
+    context.lineWidth=linewidth;
+    context.lineCap='round';//  设置或返回线条的结束端点样式
+    context.stroke();
+      context.restore();
+    }
+    
+  })()
+  
+  
+  </script>
+</body>
+</html>

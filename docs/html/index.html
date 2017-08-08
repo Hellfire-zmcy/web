@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript" src="d7e54f92-a6c8-4ae7-9ee1-d6aa4b9036a1/js/jquery-min.js"></script>
+	<script type="text/javascript" src="0377f3b92b764b24a1d6339a9bf0b0a6.js"></script>
+	<meta charset="UTF-8">
+	<title>天天美剧 - 您的高清美剧下载中心 | 美剧天堂|人人美剧|ttmj|美剧排行榜</title>
+	<meta name="baidu-site-verification" content="CwFuTEIwg7" />
+
+	<meta name="keywords" content="天天美剧,美剧下载,美剧天堂,西部世界,行尸走肉,ttmj,人人美剧,字幕组,高清美剧,高清电影,生活大爆炸,电影天堂"/>
+	<meta name="description" content="天天美剧（ttmeiju.com）第一时间为您提供最火最新的高清美剧下载。天天美剧是一个非盈利性美剧爱好者组织，我们的宗旨是：分享快乐，打造国内最顶级的BT美剧片源分享平台" />
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="../css/css.css">
+	<script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=2"></script>
+</head>
+
+<body>
+
+	<div id="header">
+		<div class="headertop">
+			<a href="/"><img width="163px" height="45px" src="../image/logo.png" alt="天天美剧" class="logo"></a>
+
+			<ul class="menu">
+				<a href="/"><li class="active">首页</li></a>
+				<a href="/latest.html"><li >近日更新</li></a>
+				<a href="/article.html"><li >影评资讯</li></a>
+				<a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+				<a href="/summary.html"><li >排行榜</li></a>
+				<a href="/countdown.html"><li >倒计时</li></a>
+				<a href="/weekcalendar.html"><li >时间表</li></a>
+				<a href="/ttsub.html"><li >天天字幕组</li></a>
+				<a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+			</ul>
+
+			<div class="searchbox">
+				<form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+					<input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+					<input type="submit" class="bt2" value="">
+					<input type="radio" name="range" id="r1" value="0" checked> 美剧
+					<input type="radio" id="r2" name="range" value="1"> 种子
+				</form>
+			</div>
+
+			<script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+		</div>
+
+	</div>
+
+	<div style="margin-top:20px;margin-bottom:20px;">
+		<p style="margin-bottom:10px;">
+			<a href="https://lnk0.com/ZdkQxp" target="_blank">
+				<img src="http://i1.piimg.com/588755/c15c8d5f19edb450.png" title="人人视频app" alt="1494594952488516.png" style="width: 990px; height: 90px;" width="990" vspace="0" height="90" border="0"/>
+			</a>
+		</p>
+
+		<p>
+			<a href="http://magicabc.org/col.jsp?id=122" target="_blank">
+				<img src="http://i2.muimg.com/588755/44e9127dbade4c82.png" title="MajicABC" alt="微信图片_20170518152656.png"/>
+			</a>
+		</p>  
+	</div>
+
+
+	<div id="wrapper">
+		<div class="midder">
+
+			<div id="gtop"><a href="#top" target="_self"></a></div>
+
+			<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+			<script type="text/javascript">
+				jQuery(document).ready(function () {
+					$("a[name='miurl']").each(function() {
+						var href = $(this).attr("href");
+						var filename = $(this).attr("filename");
+						href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+						$(this).attr("href",href)
+					})
+
+	// $("img[ectype='clicknode']").click(function(){
+	// 	var seedid = $(this).attr('name');
+	// 	var nodetype = $(this).attr('nodetype');
+    //     var w = window.open();
+	// 	$.ajax({
+	// 	            url:"/index.php/seed/nodeclick.html",
+	// 	            data:"seedid="+seedid+"&nodetype="+nodetype,
+	// 	            type:'post',
+	// 	            cache:false,
+    //                 success:function(str){
+	// 					//alert(str.replace(/amp;/g, ""));
+	// 					str = str.replace(/amp;/g, "");
+    //                     w.location = str;
+    //                 },
+    //                 error: function(){
+    //                      w.close();
+    //                 }
+	// 	}); 
+  	// });
+
+  	$("img[ectype='downnode']").click(function(){
+  		var seedid = $(this).attr('name');
+  		$.ajax({
+  			url:"/index.php/seed/ajaxclick.html",
+  			data:"seedid="+seedid,
+  			type:'post',
+  			cache:false,
+  			success:function(data){
+  				return false;
+  			},
+  			error: function(){
+  				return false;
+  			}
+  		}); 
+  	});
+
+// 	$("img[ectype='zmdownload']").click(function(){
+// 		var engname = $(this).attr('name');
+//     	       $(this).attr('src','/Application/Home/View/Public/static/images/loading.gif');
+// 				$.ajax({
+// 							url:"/index.php/zimu/index.html",
+// 							data:"engname="+engname,
+// 							type:'post',
+// 							cache:false,
+// 							success:function(data){
+// 										$("img[ectype='zmdownload']").attr('src','/Application/Home/View/Public/static/images/mi.png');
+// 										if(data){
+// 											var href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(data)+ "&name="+engname
+// 											//window.open(href, "_blank");
+// 											//window.location.href = href;
+// 											var openLink = $("#zimulink");
+// 											openLink.attr('href', href);
+// 											openLink[0].click();
+// 										}else{
+// 											alert("字幕文件暂不存在!");
+// 										}
+// 						}
+// 				});
+//   })
+});
+</script>
+
+<div class="contentbox">
+	<div class="weeklists">
+
+		<div class="wlsnav">
+			<ul>
+				<a href="/latest-0.html"><li name="0" class="active">05-21<e>▼</e>				</li></a>
+				<div class="fenge"></div><a href="/latest-1.html"><li name="1" >05-20			</li></a>
+				<div class="fenge"></div><a href="/latest-2.html"><li name="2" >05-19			</li></a>
+				<div class="fenge"></div><a href="/latest-3.html"><li name="3" >05-18			</li></a>
+				<div class="fenge"></div><a href="/latest-4.html"><li name="4" >05-17			</li></a>
+				<div class="fenge"></div><a href="/latest-5.html"><li name="5" >05-16			</li></a>
+				<div class="fenge"></div><a href="/latest-6.html"><li name="6" >05-15			</li></a>
+			</ul>
+		</div>
+
+		<table class="latesttable" cellpadding="0" cellspacing="0">
+			<tr class="Shead">
+				<td width="5%" align="center">序号</td>
+				<td width="50%" align="left">名字</td>
+				<td width="15%">下载</td>
+				<td width="7%">大小</td>
+				<td width="7%">制式</td>
+				<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+			</tr>
+			<tr class="Scontent1">
+				<td>
+					<a href="/meiju/Lucifer.html" target="_blank" title="路西法 Lucifer  S02E16 1080p  WEB-DL">1.	</a>
+				</td>
+				<td align="left">
+					<a href="/seed/81915.html" target='_blank' title="路西法 Lucifer  S02E16 1080p  WEB-DL">路西法 Lucifer  S02E16 1080p  WEB-DL			</a>
+				</td>
+				<td align="center" style="padding:0px;">
+					<a href='https://pan.baidu.com/s/1miuRQEs' target="_blank" rel="nofollow" title='百度云盘下载'><img ectype="downnode" name='81915' width="20px" src='/Application/Home/View/Public/static/images/bd.png' alt='百度云盘'></a>
+					<a href='https://rarbg.to/download.php?id=wrc5efx&amp;f=Lucifer.S02E16.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.to].torrent' rel="nofollow" title='BT美剧片源下载'>
+					<img src='/Application/Home/View/Public/static/images/bt.png' ectype="downnode" width="20px" name='81915' alt='BT美剧片源下载'>
+					</a>
+					<a href='magnet:?xt=urn:btih:4841c90af19c6a427cc78aa6ac500df851369d3f&amp;dn=Lucifer.S02E16.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710' rel="nofollow" title='磁力链高清美剧下载'>
+					<img src='/Application/Home/View/Public/static/images/cili.png' ectype="downnode" width="20px" name='81915' alt='磁力链高清美剧下载'></a>
+
+
+
+					<a href='magnet:?xt=urn:btih:4841c90af19c6a427cc78aa6ac500df851369d3f&amp;dn=Lucifer.S02E16.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710' rel="nofollow" name='miurl' filename="路西法 Lucifer  S02E16 1080p  WEB-DL" target='_blank' title='小米路由器远程下载'><img  src='/Application/Home/View/Public/static/images/mi.png' width="20px" name='81915' alt='小米路由器远程下载'></a>
+				</td>
+				<td>1.72G</td>
+				<td>1080p</td>
+				<td>无字幕</td>
+			</tr>
+		</table>
+
+
+
+</div>
+</div>    
+
+<!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+		<h2> 
+		    <a id="btn_min" href="javascript:;" class="min"></a> 
+		    <a id="btn_close" href="javascript:;" class="close"></a> 
+		</h2>
+		<div class="content2">
+		    <div class="wrap2"> 
+			<p><img src="http://i2.muimg.com/588755/96b6b7c4272078cd.jpg" title="1491806998812826.jpg" alt="1491806998812826.jpg" style="width: 300px; height: 250px;" vspace="0" height="250" border="0" width="300"/></p>		    </div>
+		</div>
+	</div>
+<div id="footer">
+<!--<script src="http://pv.sohu.com/cityjson" type="text/javascript"></script>-->
+<script>
+(function() {
+        
+        /*对联广告*/
+        var duilian = $("div.duilian");
+        var duilian_close = $("a.duilian_close");
+        
+        var screen_w = screen.width;
+        if(screen_w>1024){duilian.show();}
+        duilian_close.click(function(){
+            $(this).parent().hide();
+            return false;
+        });
+
+        /*右下角广告*/
+        var oDiv = document.getElementById('miaov_float_layer');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr('src','http://i4.buimg.com/588755/ba83266942fc5444.jpg');
+        // }
+        // $("#miaov_float_layer .wrap2").show(); 
+        var oBtnMin = document.getElementById('btn_min');
+        var oBtnClose = document.getElementById('btn_close');
+        var oDivContent = oDiv.getElementsByTagName('div')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = 'block';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = 'absolute';
+            repositionAbsolute();
+            miaovAddEvent(window, 'scroll', repositionAbsolute);
+            miaovAddEvent(window, 'resize', repositionAbsolute);
+        }
+        else {
+            oDiv.style.position = 'fixed';
+            repositionFixed();
+            miaovAddEvent(window, 'resize', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+            (
+                oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                function() {
+                    oBtnMin.className = oBtnMin.className == 'min' ? 'max' : 'min';
+                }
+            );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = 'none';
+            oDiv.innerHTML = "";
+        };
+        
+  })();
+  </script>
+
+<div style="margin-top:30px;margin-bottom:25px;">
+	<p><img src="http://i4.buimg.com/588755/af2cd506e1ae7b22.jpg" title="1495183603937937.jpg" alt="微信图片_20170519162732.jpg"/></p></div>
+
+ <div id="footer_top">
+    <p class="good_link">
+          <a href="/">天天美剧</a>　|　
+          <a href="http://bbs.ttmeiju.com/forum.php?mod=forumdisplay&fid=38" target="_blank">站长留言</a>　|　
+          <a href="/about-3.html">联系我们</a>
+    </p>
+ </div>
+ <div class="copyright">
+   <p id="copyright">
+    Powered by ttmeiju.com <em title="20170410">2.1</em> &copy; 2011-2017
+       <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F52542b48446553babc42e4baae658e27' type='text/javascript'%3E%3C/script%3E"));
+       </script>
+    </p>
+ </div>
+  </div>
+</div>
+
+<!--footer end-->
+</div>
+</body>
+</html>
